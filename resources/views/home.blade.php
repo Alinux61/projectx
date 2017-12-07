@@ -50,6 +50,8 @@
                              <th scope="col">Product Name</th>
                              <th scope="col">Quantity in stock</th>
                              <th scope="col">Price per item</th>
+                             <th scope="col">Total value number</th>
+                             <th scope="col">Created Date</th>
                            </tr>
                          </thead>
                          <tbody>
@@ -60,9 +62,19 @@
                                <td>{{ $stock->product_name }}</td>
                                <td>{{ $stock->quantity_in_stock }}</td>
                                <td>{{ $stock->price_per_item }} $</td>
+                               <td>{{ $stock->quantity_in_stock * $stock->price_per_item }} </td>
+                               <td>{{ $stock->created_at }} </td>
                              </tr>
                            @endforeach
-
+                           <tr>
+                             <th scope="row"></th>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td></td>
+                             <td>Total Product</td>
+                             <td>{{ $total }} </td>
+                           </tr>
                          </tbody>
                        </table>
                 </div>

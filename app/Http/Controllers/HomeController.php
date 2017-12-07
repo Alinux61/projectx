@@ -25,7 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'stocks' => Stock::all()
+            'stocks' => Stock::all(),
+            'total' => Stock::count() 
         ]);
     }
 }
